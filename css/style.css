@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    min-height:100vh;
+    /* background-image: url(../images/backgroud.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+nav a:hover{
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: 0;
+}
+.main-image img{
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+.hideonmobile{
+    display: block;
+}
+.hemburger{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.5s all;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.form-div{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    transform: translate(-50% -20%);
+    width: 250px;
+    height: auto;
+    background: #00000054;
+    padding: 10px;
+    border: 6px solid #ffc400;
+    box-shadow: 6px 6px 0px #ffc400;
+}
+.form-div input{
+    width: 94%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 0px 6px;
+}
+.form-div button{
+    min-width: 100px;
+    padding:5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media( max-width:400px) {
+    .sidebar{
+        width:100%;
+    }
+    .main-image img{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media( max-width:800px) {
+    .hideonmobile{
+        display: none;
+    }
+    .hemburger{
+        display: block;
+    }
+    .form-div{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        
+    }
+    /* .main-image img{
+        width: 100%;
+        height: calc(100vh - 60px)
+    } */
+    
+}
